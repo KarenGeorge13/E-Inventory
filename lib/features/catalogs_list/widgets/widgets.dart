@@ -1,0 +1,1 @@
+export 'catalog_list_view.dart';
