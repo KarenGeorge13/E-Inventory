@@ -110,9 +110,12 @@ class _ThingDetailPageState extends State<ThingDetailPage> {
               style: Theme.of(context).textTheme.labelMedium,
             ),
             const SizedBox(height: 10),
-            thing.imagePath!.isEmpty
-                ? Text('Изображение отсутствует')
-                : Image.file(File(thing.imagePath.toString()), height: 300,),
+            Center(
+              child: thing.imagePath!.isEmpty
+                  ? Text('Изображение отсутствует')
+                  : Image.file(File(thing.imagePath.toString()), height: 300,),
+            )
+
           ],
         ),
       ),
